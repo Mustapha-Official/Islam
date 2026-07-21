@@ -1,0 +1,419 @@
+/*-- VARIABLE SET-UP FOR COLOUR PALETTE --*/
+:root{
+  --background: #FFFAF6;
+  --soft-bg: #FFEEE0;
+  --primary: linear-gradient(30deg, #2E1400, #883C00);
+  --secondary: #7D3900;
+  --cards: #FFFFFF;
+  
+  --body-color: #424040;
+  --prim-color: #FAFAFA;
+  --heading: #2A2A2A;
+  
+  --ancient: #A54900;
+}
+
+/*-- BASE SET --*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+
+/*-- TYPOGRAPHY, FONT SIZE TO CHANGE AUTOMATICALLY --*/
+h1{font-size: clamp(40px, 5vw, 55px);}
+h2{font-size: clamp(25px, 4vw, 40px);}
+h3{font-size: clamp(20px, 3vw, 30);}
+p{font-size: clamp(16px, 1vw, 18px);}
+
+/*-- SETTINGS FOR MAXIMUM WIDTH, AND COLOURS SETUP ON SPECIFIC TEXTS --*/
+.wrapper{max-width: 1200px; margin: 0 auto; padding: 0}
+span{color: var(--primary);}
+b{color: var(--ancient);}
+strong{color: var(--secondary);}
+code{color: var(--ancient); font-family: cursive;}
+
+/*-- MAIN BODY STYLE --*/
+body{
+  background-color: var(--background);
+  color: var(--body-color);
+  line-height: 1.5;
+  transition: all 0.4s linear ease;
+}
+
+/*-- THIS IS FOR ALL CONTAINERS --*/
+.container,
+.navigation{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin: 10px auto;
+}
+
+.logo i{
+  color: var(--secondary);
+  font-size: 35px;
+  border-radius: 20px;
+}
+
+/*-- HEADER STYLING --*/
+header{
+  background-color: #FFFAF6DE;
+  position: fixed;
+  width: 100%;
+  padding: 5px 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.24);
+  z-index: 999;
+  left: 0;
+  top: 0;
+}
+
+/*-- NAVIGATION LINKS ON LARGE SCREEN --*/
+.nav-links ul{
+  display: flex;
+  gap: 12px;
+  list-style-type: none;
+}
+
+.nav-links ul li a{
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+  padding: 0 7px;
+  transition: all 0.4s linear;
+}
+
+/*-- HOVER EFFECT FOR NAVIGATION LINKS --*/
+.nav-links ul li a:hover{
+  border-bottom: 2px solid var(--primary);
+  padding: 0;
+}
+
+.nav-links ul li a:active{
+  border-bottom: 2px solid var(--primary);
+  padding: 0 8px;
+  color: #000;
+}
+
+/*-- MENU BUTTON TO DISAPPEAR ON LARGE SCREEN --*/
+button{
+  display: none;
+}
+
+/*-- I'LL APPLY THIS TO ALL CARDS --*/
+.card{
+  background-color: var(--cards);
+  padding: 10px;
+  width: 260px;
+  height: 250px;
+  overflow-y: scroll;
+  border-left: 3px solid var(--heading);
+  border-bottom: 3px solid var(--heading);
+  transition: all 0.4s linear;
+  border-radius: 12px;
+  margin: 20px auto;
+}
+
+/*--hover effect on cards--*/
+.card:hover{
+  transform: translateY(5px);
+  transition: all 0.4s linear;
+  box-shadow: inset 0 0 80px #FFFFFF, 0 4px 10px #5E3100;
+}
+
+/*-- cards icons --*/
+.card i{
+  background-color: var(--cards);
+  color: var(--secondary);
+  font-size: 50px;
+  margin: 15px;
+}
+
+/*-- THIS IS FOR ALL BUTTONS --*/
+.Btn, .btn{
+  background-image: linear-gradient(40deg, #402107, #7E400C);
+  color: var(--prim-color);
+  padding: 16px 45px;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.4s linear;
+}
+
+/*--hover effect for buttons --*/
+.Btn:hover,
+.btn:hover{
+  background-image: var(--primary);
+}
+
+/*-- THIS IS FOR ALL BUTTONS --*/
+.learn {
+  border: 1.5px solid var(--secondary);
+  color: var(--secondary);
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.4s linear;
+}
+
+/*--hover effect for buttons --*/
+.learn:hover {
+  color: var(--prim-color);
+  background-color: var(--secondary);
+}
+
+/*-- HOME/HERO SECTION STYLE --*/
+.hero{
+  background-image: linear-gradient(40deg, #FFFFFF75, #FFFFFF00), url(bgg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 120px 25px;
+  text-shadow: 0 0 -5px #000000;
+}
+
+h2 strong span{color: var(--heading);}
+
+/*-- Padding for all sections & margin for all h2 --*/
+.about,
+.pillars,
+.resources,
+.five-pillars{
+  padding: 80px 30px;
+  text-align: center;
+}
+
+h2{
+  margin-bottom: 20px;
+}
+
+/*-- TAGLINE SECTION --*/
+.tagline{
+  background-image: var(--primary);
+  padding: 60px 20px;
+  font-family: cursive;
+}
+
+.tag{
+  text-align: center;
+  color: var(--background);
+  padding: 20px;
+  text-align: left;
+  width: 100%;
+  border-left: 2px solid var(--soft-bg);
+}
+
+/*-- ABOUT SECTION STYLE --*/
+.about .container{
+  gap: 30px; /*--About cards to have large gap/space--*/
+}
+
+.para,
+.res-card{text-align: left;}
+.image{
+  width: 100%; /*--Image to stretch full width --*/
+}
+/*--About card image --*/
+.image img,
+.res-card img{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  filter: drop-shadow(0 0 12px #FFFFFF);
+  border-radius: 10px;
+  animation: anime 6s infinite; /*-- Animation set on the key frames below --*/
+}
+
+/*-- Key frames animation that making the images to move on the home page --*/
+@keyframes anime{
+  0%, 100%{
+    transform: translateX(0);
+  }
+  
+  25%{
+    transform: translateX(10px);
+  }
+  
+  50%{
+    transform: translateY(10px);
+  }
+  
+  75%{
+    transform: translateX(-10px);
+  }
+}
+
+/*-- PILLARS OF ISLAM SECTION --*/
+.pillars{
+  background-color: var(--soft-bg);
+}
+
+.five-pillars {
+  background-color: var(--background);
+}
+
+/*-- Padding and alignment style for the following classes --*/
+.shahadah,
+.salah,
+.zakat,
+.sawm,
+.hajj,
+.intro,
+.allah,
+.author,
+.preference,
+.faq{
+  text-align: left;
+  padding: 90px 30px;
+}
+
+/*-- Unordered lists on different pages --*/
+.shahadah ul,
+.salah ul,
+.zakat ul,
+.sawm ul,
+.hajj ul,
+.allah ul,
+.preference ul{
+  list-style-type: lower-alpha;
+  padding: 15px;
+}
+
+/*-- Arabic texts alignment and styles --*/
+.arabic{
+  text-align: right;
+  color: var(--secondary);
+  font-family: amiri;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*-- RESOURCES PAGE LINKS--*/
+/*-- When you actually visit the links from the resources page their colours change to gray --*/
+.preference p a:visited,
+.preference p ul li a:visited{
+  color: #808080;
+}
+
+/*-- FOOTER SECTION STYLES --*/
+footer{
+  background-image: var(--primary);
+  color: var(--background);
+  padding: 60px 30px;
+}
+
+.cont-info,
+footer .logo,
+.remind{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.cont-info a{
+  text-decoration: none;
+}
+
+.cont-info a i{
+  padding: 10px;
+  color: var(--soft-bg);
+  font-size: 25px;
+}
+
+footer .logo i{
+  color: var(--soft-bg);
+  font-size: 40px;
+}
+
+footer h2{
+  color: var(--prim-color);
+}
+
+
+/*-- MEDIA QUERY TO FIT ALL MOBILE PHONE SCREEN SIZES --*/
+@media (max-width: 700px) {
+  .container{flex-direction: column; gap: 20px;}
+  
+  /*-- The header button to disappear on mobile view --*/
+  .btn{display: none;}
+  
+  /*-- This is the menu toggle button for navigation links --*/
+  button{
+    display: block;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    transition: all 0.4s linear;
+    padding: 5px 10px;
+    background-color: transparent;
+    font-size: 30px;
+    color: var(--primary);
+  }
+  
+  /*-- Navigation links to disappear and wait for instruction from JavaScript nah--*/
+  .nav-links{display: none;}
+  .nav-links ul{
+    display: block;
+    list-style-type: none;
+  }
+  
+  .nav-links ul li{
+    display: block;
+    padding: 20px 10px;
+    transition: all 0.5s ease-in;
+  }
+  
+  .nav-links ul li a{
+    display: block;
+    text-decoration: none;
+    color: var(--primary);
+  }
+  
+  /*-- JavaScript instruction suddenly rooted here --*/
+  .nav-links.active{
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 70px;
+    width: 50%;
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: var(--cards);
+  }
+  
+  /*-- To avoid too much space on the top of the cards --*/
+  .card{
+    margin-top: 10px;
+  }
+  
+  /*-- To adjust the padding on smaller screens --*/
+  .shahadah,
+  .salah,
+  .zakat,
+  .sawm,
+  .hajj,
+  .intro,
+  .allah,
+  .author,
+  .preference,
+  .faq {
+    text-align: left;
+    padding: 80px 20px;
+  }
+  
+  .about,
+  .pillars,
+  .resources,
+  .five-pillars {
+    padding: 80px 20px;
+  }
+  
+  footer{
+    padding: 40px 20px;
+  }
+}
