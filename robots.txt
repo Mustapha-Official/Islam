@@ -2,5 +2,4 @@
 User-agent: *
 Allow: /
 
-
 Sitemap: https://mustapha-official.github.io/Islam/sitemap.xml
